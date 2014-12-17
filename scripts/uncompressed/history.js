@@ -1989,7 +1989,7 @@
 			};
 
 			// For Internet Explorer
-			History.intervalList.push(setInterval(History.onUnload,History.options.storeInterval));
+			History.isInternetExplorer() && History.intervalList.push(setInterval(History.onUnload,History.options.storeInterval));
 
 			// For Other Browsers
 			History.Adapter.bind(window,'beforeunload',History.onUnload);
